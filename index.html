@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <title>Jéssica Sales | Nail Designer Especialista em Fibra e Gel</title>
+    <meta name="description" content="Agende seu horário com Jéssica Sales. Especialista em Alongamento de Unhas, Fibra de Vidro, Banho de Gel e Nail Art. Cursos presenciais e online disponíveis.">
+    <meta name="keywords" content="nail designer, alongamento de unhas, fibra de vidro, manicure, unhas de gel, curso nail designer, Jéssica Sales">
+    <meta name="author" content="Jéssica Sales">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Jéssica Sales | Nail Designer">
+    <meta property="og:description" content="Realce sua beleza com unhas incríveis. Agendamentos e Cursos.">
+    <meta property="og:image" content="logo.jpg"> 
+    <meta property="og:url" content="https://seu-site-aqui.com.br">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Jéssica Sales Nail Designer",
+      "image": "logo.jpg",
+      "description": "Especialista em alongamentos de unhas, fibra de vidro e banho de gel.",
+      "priceRange": "$$",
+      "telephone": "+5511999999999"
+    }
+    </script>
+
+    <style>
+        /* --- PALETA DE CORES "JÉSSICA SALES LUXURY" --- */
+        :root {
+            /* TONS ROSE GOLD METÁLICOS (Baseados na Logo) */
+            --rose-dark: #A66E5E;       /* Cobre escuro */
+            --rose-primary: #D9A693;    /* Rose Gold médio */
+            --rose-light: #F2D4C9;      /* Rose claro / Brilho */
+            
+            /* TONS NEUTROS (Baseados no Fundo da Logo) */
+            --grey-logo: #545454;       /* Cinza Chumbo da logo original */
+            --charcoal: #2C2C2C;        /* Cinza Quase Preto (Fundo Dark) */
+            
+            /* DARK MODE (Padrão - Luxuoso) */
+            --bg-body: var(--charcoal);
+            --bg-overlay: rgba(44, 44, 44, 0.97);
+            --bg-card: rgba(60, 60, 60, 0.85); /* Vidro escuro */
+            
+            --text-main: #F9F5F2;       /* Off-white (Creme muito claro) */
+            --text-secondary: #C0C0C0;  /* Prata fosco */
+            
+            /* Gradiente Metálico Rose Gold */
+            --rose-gradient: linear-gradient(135deg, var(--rose-dark), var(--rose-primary) 40%, var(--rose-light) 60%, var(--rose-dark));
+            
+            /* Bordas e Detalhes */
+            --border-glass: rgba(217, 166, 147, 0.3); /* Borda Rose translúcida */
+            --shadow-glass: 0 15px 40px -10px rgba(0, 0, 0, 0.6);
+            
+            --input-bg: rgba(0, 0, 0, 0.4);
+            --btn-bg: rgba(255, 255, 255, 0.05);
+            --icon-color: var(--rose-primary);
+        }
+
+        /* LIGHT MODE (Clean / Nude Chic) */
+        body.light-theme {
+            /* Fundo Nude Suave */
+            --bg-body: #F9F5F2; 
+            --bg-overlay: rgba(249, 245, 242, 0.97);
+            --bg-card: rgba(255, 255, 255, 0.92);
+            
+            /* Texto Cinza Chumbo (Conexão com a logo) */
+            --text-main: var(--grey-logo);
+            --text-secondary: #7a7a7a;
+            
+            /* Rose Gold adaptado para fundo claro */
+            --rose-primary: #C48A6F; 
+            --rose-gradient: linear-gradient(135deg, #C48A6F, #E6B8A2);
+            
+            --border-glass: rgba(196, 138, 111, 0.25);
+            --shadow-glass: 0 15px 40px -10px rgba(166, 110, 94, 0.15);
+            
+            --input-bg: #FFFFFF;
+            --btn-bg: rgba(84, 84, 84, 0.05);
+            --icon-color: #C48A6F;
+        }
+
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; -webkit-tap-highlight-color: transparent; transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; }
+        html { scroll-behavior: smooth; }
+        a { text-decoration: none !important; color: inherit; }
+
+        body {
+            /* Imagem de fundo sutil (mármore escuro ou textura) */
+            background-color: var(--bg-body);
+            background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop'); 
+            background-size: cover; background-position: center; background-attachment: fixed;
+            min-height: 100vh; display: flex; justify-content: center; align-items: flex-start;
+            color: var(--text-main); padding: 20px 10px; overflow-x: hidden; position: relative;
+        }
+        
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-overlay); z-index: -1;
+        }
+
+        /* CARD PRINCIPAL */
+        .glass-card {
+            width: 100%; max-width: 450px; position: relative;
+            background: var(--bg-card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass); box-shadow: var(--shadow-glass);
+            border-radius: 30px; padding: 40px 20px; text-align: center;
+            overflow: hidden; z-index: 1; margin-top: 20px; margin-bottom: 20px;
+        }
+
+        .theme-toggle {
+            position: absolute; top: 20px; right: 20px;
+            background: var(--btn-bg); border: 1px solid var(--border-glass);
+            color: var(--icon-color); width: 35px; height: 35px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;
+        }
+
+        /* PERFIL */
+        .profile-img-container {
+            width: 160px; height: auto; margin: 0 auto 10px auto;
+            padding: 4px; position: relative;
+        }
+        .profile-img {
+            width: 150px; height: 150px; object-fit: cover;
+            border-radius: 50%; 
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
+             /* Leve arredondamento se a logo for quadrada */
+        }
+        
+        h1 { font-family: 'Great Vibes', cursive; font-size: 2.8rem; margin-bottom: -5px; color: var(--text-main); line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        body.light-theme h1 { text-shadow: none; color: var(--rose-primary); }
+        
+        h2 { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 15px; }
+        
+        .bio-text { font-size: 0.85rem; color: var(--text-secondary); max-width: 95%; margin: 0 auto 30px auto; font-weight: 400; border-top: 1px solid var(--border-glass); padding-top: 15px; font-style: italic;}
+
+        /* BOTOES TOPO */
+        .action-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 35px; }
+        .btn-action {
+            background: var(--btn-bg); border: 1px solid var(--border-glass); border-radius: 16px; padding: 14px;
+            display: flex; flex-direction: column; align-items: center; gap: 6px;
+        }
+        .btn-action i { font-size: 1.3rem; color: var(--icon-color); }
+        .btn-action span { font-size: 0.8rem; font-weight: 600; }
+        .btn-action:hover { background: var(--rose-gradient); border-color: transparent; transform: translateY(-3px); }
+        .btn-action:hover i, .btn-action:hover span { color: #fff; }
+
+        /* HORÁRIOS */
+        .hours-section {
+            background: rgba(0,0,0,0.15); border: 1px solid var(--border-glass);
+            border-radius: 18px; padding: 20px; margin-bottom: 35px;
+        }
+        body.light-theme .hours-section { background: rgba(255,255,255,0.4); }
+        
+        .hours-title { font-size: 0.8rem; font-weight: 700; color: var(--icon-color); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .hours-row { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-glass); padding: 8px 0; font-size: 0.8rem; color: var(--text-secondary); }
+        .hours-row:last-child { border-bottom: none; }
+        .status-open { color: #fff; font-weight: 700; font-size: 0.65rem; background: var(--rose-primary); padding: 3px 8px; border-radius: 10px; }
+        .status-closed { color: var(--text-secondary); font-weight: 500; font-size: 0.65rem; opacity: 0.7; }
+
+        /* TITULOS SECOES */
+        .section-header { text-align: left; margin-bottom: 18px; padding-left: 12px; border-left: 3px solid var(--icon-color); margin-top: 35px;}
+        .section-header h3 { font-size: 1rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 1.5px; }
+
+        /* CARROSSEL */
+        .carousel-container { position: relative; width: 100%; margin-bottom: 20px; }
+        .carousel-track-manual {
+            display: flex; gap: 12px; overflow-x: auto; scroll-behavior: smooth; padding-bottom: 10px;
+            -webkit-overflow-scrolling: touch; scrollbar-width: none;
+        }
+        .carousel-track-manual::-webkit-scrollbar { display: none; }
+        .service-card {
+            min-width: 150px; height: 220px; border-radius: 18px; overflow: hidden; position: relative; border: 1px solid var(--border-glass); flex-shrink: 0;
+            background: #1a1a1a;
+        }
+        .service-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
+        .service-info { 
+            position: absolute; bottom: 0; left: 0; width: 100%; 
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 25%, transparent); 
+            padding: 15px 10px 10px; text-align: left; 
+        }
+        .service-info h4 { color: white; font-size: 0.85rem; margin-bottom: 4px; font-weight: 600; text-shadow: 1px 1px 2px black; }
+        .service-info span { color: #fff; font-size: 0.65rem; font-weight: 700; background: var(--rose-primary); padding: 3px 6px; border-radius: 6px; }
+
+        /* FORMULÁRIO (MOBILE OPTIMIZED) */
+        .schedule-form { 
+            background: var(--input-bg); border: 1px solid var(--border-glass); 
+            border-radius: 20px; padding: 25px 20px; margin-bottom: 20px; text-align: left; 
+        }
+        .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        
+        .form-group { margin-bottom: 18px; }
+        .form-label { display: block; font-size: 0.75rem; color: var(--icon-color); margin-bottom: 8px; font-weight: 700; margin-left: 4px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .form-input, .form-select, .form-textarea {
+            width: 100%; padding: 14px; 
+            border-radius: 14px; border: 1px solid var(--border-glass);
+            background: rgba(255,255,255,0.05); color: var(--text-main); font-size: 0.95rem; 
+            outline: none; appearance: none; font-family: 'Montserrat', sans-serif;
+        }
+        .form-textarea { resize: vertical; min-height: 80px; }
+        
+        input[type="date"], input[type="time"] { min-height: 50px; }
+        ::-webkit-calendar-picker-indicator { filter: invert(1); opacity: 0.6; cursor: pointer; }
+        body.light-theme ::-webkit-calendar-picker-indicator { filter: invert(0); }
+        body.light-theme .form-input, body.light-theme .form-select, body.light-theme .form-textarea { 
+            background: #fff; border-color: #d1d1d1; color: #333; 
+        }
+        
+        .form-input:focus, .form-select:focus, .form-textarea:focus { 
+            border-color: var(--rose-primary); box-shadow: 0 0 0 2px rgba(217, 166, 147, 0.2); 
+        }
+
+        .btn-schedule {
+            width: 100%; background: var(--rose-gradient);
+            color: #fff; font-weight: 700; padding: 18px; border: none; border-radius: 50px;
+            text-transform: uppercase; font-size: 0.95rem; cursor: pointer; margin-top: 10px;
+            box-shadow: 0 5px 20px rgba(166, 110, 94, 0.3); display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .btn-schedule:hover { transform: scale(1.02); filter: brightness(1.1); }
+
+        /* CURSO CTA */
+        .course-card {
+            background: linear-gradient(145deg, rgba(217, 166, 147, 0.1), rgba(0,0,0,0));
+            border: 1px solid var(--border-glass); border-radius: 20px; padding: 25px 15px;
+            margin-bottom: 20px; position: relative; overflow: hidden; text-align: center;
+        }
+        .course-badge { background: var(--rose-primary); color: #fff; font-size: 0.6rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; display: inline-block; margin-bottom: 10px; }
+        .course-title { font-size: 1.2rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px; line-height: 1.2; }
+        .course-desc { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 15px; }
+        .btn-course {
+            background: transparent; color: var(--text-main); font-weight: 800; padding: 10px 22px; 
+            border-radius: 50px; border: 1px solid var(--border-glass); text-transform: uppercase; font-size: 0.75rem; 
+            cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;
+        }
+        .btn-course:hover { background: var(--rose-primary); color: #fff; border-color: transparent; }
+
+        /* FAQ */
+        .faq-item { background: var(--btn-bg); border: 1px solid var(--border-glass); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+        .faq-question { padding: 15px; font-size: 0.8rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .faq-answer { max-height: 0; overflow: hidden; padding: 0 15px; font-size: 0.75rem; color: var(--text-secondary); transition: 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 120px; padding-bottom: 15px; }
+
+        /* FOOTER */
+        .footer { border-top: 1px solid var(--border-glass); padding-top: 25px; margin-top: 20px; font-size: 0.7rem; color: var(--text-secondary); }
+        .footer-icons { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
+        .footer-icons a {
+            width: 40px; height: 40px; border-radius: 50%; background: var(--btn-bg); color: var(--text-main);
+            display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border: 1px solid var(--border-glass);
+        }
+        .footer-icons a:hover { color: var(--rose-primary); border-color: var(--rose-primary); transform: translateY(-3px); }
+
+        /* MEDIA QUERIES PARA MOBILE */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            .glass-card { padding: 30px 15px; }
+            .action-grid { gap: 8px; }
+            .btn-action { padding: 10px; }
+            
+            /* Ajustes do Formulário no Mobile */
+            .form-grid-2 { 
+                grid-template-columns: 1fr; /* Empilha Data e Hora */
+                gap: 15px; 
+            }
+            .schedule-form {
+                padding: 20px 15px; 
+            }
+            .form-input, .form-select, .form-textarea {
+                font-size: 16px; /* Evita zoom automático no iPhone */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="glass-card">
+        <header>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar Tema"><i class="fas fa-sun"></i></button>
+
+            <div class="profile-section">
+                <div class="profile-img-container">
+                    <img src="logo.jpg" alt="Logo Jéssica Sales Nail Designer" class="profile-img" width="160" height="160">
+                </div>
+                <h1 itemprop="name">Jéssica Sales</h1>
+                <h2 itemprop="jobTitle">Nail Designer</h2>
+                <p class="bio-text" itemprop="description">Realçando sua beleza com arte, delicadeza e sofisticação em alongamentos e nail art.</p>
+            </div>
+
+            <nav class="action-grid">
+                <a href="#agendamento" class="btn-action"><i class="fab fa-whatsapp"></i> <span>Agendar</span></a>
+                <a href="https://goo.gl/maps/seu-link-aqui" target="_blank" class="btn-action"><i class="fas fa-map-marker-alt"></i> <span>Localização</span></a>
+            </nav>
+        </header>
+
+        <section class="hours-section">
+            <div class="hours-title"><i class="far fa-clock"></i> Atendimento</div>
+            <div class="hours-row"><span>Terça - Sexta</span><span>09:00 - 19:00 <span class="status-open">ABERTO</span></span></div>
+            <div class="hours-row"><span>Sábado</span><span>09:00 - 17:00</span></div>
+            <div class="hours-row"><span>Dom / Seg</span><span class="status-closed">FECHADO</span></div>
+        </section>
+
+        <section>
+            <div class="section-header"><h3>Procedimentos</h3></div>
+            <div class="carousel-container">
+                <div class="carousel-track-manual" id="servicesTrack">
+                    <article class="service-card"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1974&auto=format&fit=crop" alt="Alongamento Fibra de Vidro"><div class="service-info"><h4>Alongamento Fibra</h4><span>R$ 180,00</span></div></article>
+                    <article class="service-card"><img src="https://images.unsplash.com/photo-1632973547669-82311dd9ea19?q=80&w=1974&auto=format&fit=crop" alt="Banho de Gel"><div class="service-info"><h4>Banho de Gel</h4><span>R$ 120,00</span></div></article>
+                    <article class="service-card"><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=2070&auto=format&fit=crop" alt="Esmaltação em Gel"><div class="service-info"><h4>Esmaltação em Gel</h4><span>R$ 80,00</span></div></article>
+                    <article class="service-card"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop" alt="Spa dos Pés"><div class="service-info"><h4>Spa dos Pés</h4><span>R$ 70,00</span></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-card">
+            <span class="course-badge">Vagas Abertas</span>
+            <h3 class="course-title">Curso Nail Designer</h3>
+            <p class="course-desc">Domine a Fibra de Vidro do zero ao avançado.</p>
+            <button onclick="infoCurso()" class="btn-course">Saiba Mais <i class="fas fa-arrow-right"></i></button>
+        </section>
+
+        <section id="agendamento">
+            <div class="section-header"><h3>Agendamento</h3></div>
+            <form class="schedule-form" onsubmit="event.preventDefault(); agendarWhatsApp();">
+                
+                <div class="form-group">
+                    <label class="form-label" for="clientName">Seu Nome *</label>
+                    <input type="text" id="clientName" class="form-input" placeholder="Digite seu nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="serviceSelect">Procedimento *</label>
+                    <select id="serviceSelect" class="form-select" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="Alongamento Fibra">Alongamento Fibra</option>
+                        <option value="Banho de Gel">Banho de Gel</option>
+                        <option value="Manutenção">Manutenção</option>
+                        <option value="Esmaltação em Gel">Esmaltação em Gel</option>
+                        <option value="Spa dos Pés">Spa dos Pés</option>
+                    </select>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label class="form-label" for="clientDate">Data Preferida</label>
+                        <input type="date" id="clientDate" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="clientTime">Horário</label>
+                        <input type="time" id="clientTime" class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="clientObs">Observações</label>
+                    <textarea id="clientObs" class="form-textarea" placeholder="Alguma dúvida ou detalhe específico? (Opcional)"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-schedule"><i class="fab fa-whatsapp"></i> Solicitar Horário</button>
+            </form>
+        </section>
+
+        <section>
+            <div class="section-header"><h3>Dúvidas</h3></div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">Aceita cartão? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Sim! Crédito, Débito e PIX.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">Endereço do Studio? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Rua Exemplo, 123 - Centro. Próximo ao mercado X.</div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>© 2026 Jéssica Sales Nail Designer.</p>
+        </footer>
+    </main>
+
+    <script>
+        // TEMA
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.querySelector('.theme-toggle i');
+            body.classList.toggle('light-theme');
+            if(body.classList.contains('light-theme')){
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        if(localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+            document.querySelector('.theme-toggle i').classList.replace('fa-sun', 'fa-moon');
+        }
+
+        // AGENDAMENTO INTELIGENTE
+        function agendarWhatsApp() {
+            const nome = document.getElementById('clientName').value;
+            const servico = document.getElementById('serviceSelect').value;
+            const data = document.getElementById('clientDate').value;
+            const hora = document.getElementById('clientTime').value;
+            const obs = document.getElementById('clientObs').value;
+            
+            let dataFormatada = "";
+            if(data) {
+                const [ano, mes, dia] = data.split('-');
+                dataFormatada = `${dia}/${mes}/${ano}`;
+            }
+
+            let mensagem = `Olá Jéssica! ✨%0A%0AGostaria de solicitar um agendamento:%0A%0A`;
+            mensagem += `👤 *Nome:* ${nome}%0A`;
+            mensagem += `💅 *Serviço:* ${servico}%0A`;
+            
+            if(dataFormatada) mensagem += `📅 *Data Preferida:* ${dataFormatada}%0A`;
+            if(hora) mensagem += `⏰ *Horário:* ${hora}%0A`;
+            if(obs) mensagem += `📝 *Obs:* ${obs}%0A`;
+            
+            mensagem += `%0AAguardando confirmação! 🥰`;
+
+            const numeroWhatsApp = "5511999999999"; // SUBSTITUA PELO SEU NÚMERO
+
+            window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`, '_blank');
+        }
+
+        // INFO CURSO
+        function infoCurso() {
+            const msg = "Olá Jéssica! Tenho interesse no Curso de Nail Designer. Poderia me enviar a ementa e valores? 🎓";
+            const num = "5511999999999";
+            window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
+        }
+
+        // FAQ
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
